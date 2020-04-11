@@ -6,8 +6,10 @@ import tornadofx.*
 class DarkTheme : BaseTheme(Colors) {
 
     object Colors:ThemeColors {
-        override val background: Color
+        override val windowBackground: Color
             get() = c("#0A0B18")
+        override val background: Color
+            get() = c("#2c2c34")
         override val text: Color
             get() = c("#E1E1E1")
         override val primary: Color

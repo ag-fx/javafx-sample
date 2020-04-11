@@ -6,6 +6,7 @@ class MainView : View("Main View") {
     override val root = borderpane {
         setPrefSize(800.0, 600.0)
         top<ToolbarView>()
+        left<SidebarView>()
         center {
             label("Hello world")
         }

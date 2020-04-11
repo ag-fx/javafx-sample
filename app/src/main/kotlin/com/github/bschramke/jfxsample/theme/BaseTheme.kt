@@ -7,18 +7,43 @@ open class BaseTheme(colors: ThemeColors) : Stylesheet() {
 
     companion object {
         val glyphIcon by cssclass("glyph-icon")
+        val header by cssclass()
+        val sidebar by cssclass()
     }
 
     init {
         root {
-            backgroundColor += colors.background
+            backgroundColor += colors.windowBackground
             fill = colors.text
             textFill = colors.text
 
             s("*") {
-                backgroundColor += colors.background
                 fill = colors.text
                 textFill = colors.text
+            }
+        }
+        toolBar {
+            backgroundColor += colors.background
+
+            button {
+                backgroundColor += colors.background
+
+                and(hover) {
+                    backgroundColor += colors.primary
+                }
+            }
+        }
+        header {
+            backgroundColor += colors.background
+        }
+        sidebar {
+            backgroundColor += colors.background
+            button {
+                backgroundColor += colors.background
+
+                and(hover) {
+                    backgroundColor += colors.primary
+                }
             }
         }
 
@@ -29,6 +54,7 @@ open class BaseTheme(colors: ThemeColors) : Stylesheet() {
     }
 
     interface ThemeColors {
+        val windowBackground: Color
         val background: Color
         val text: Color
         val primary: Color
