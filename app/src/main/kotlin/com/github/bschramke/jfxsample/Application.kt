@@ -1,7 +1,7 @@
 package com.github.bschramke.jfxsample
 
 import com.github.bschramke.jfxsample.theme.DarkTheme
-import com.github.bschramke.jfxsample.views.MainView
+import com.github.bschramke.jfxsample.view.MainView
 import javafx.application.Application.launch
 import tornadofx.*
 

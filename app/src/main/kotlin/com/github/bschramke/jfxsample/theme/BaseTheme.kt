@@ -12,10 +12,12 @@ open class BaseTheme(colors: ThemeColors) : Stylesheet() {
     init {
         root {
             backgroundColor += colors.background
+            fill = colors.text
             textFill = colors.text
 
             s("*") {
                 backgroundColor += colors.background
+                fill = colors.text
                 textFill = colors.text
             }
         }
