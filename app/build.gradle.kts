@@ -4,6 +4,7 @@ plugins {
     application
     kotlin("jvm")
     id("org.openjfx.javafxplugin") version "0.0.8"
+    id("io.freefair.jsass-base") version "4.1.6"
 }
 
 application {
@@ -23,6 +24,12 @@ javafx {
     modules = listOf("javafx.controls", "javafx.graphics")
 }
 
+jsass {
+    linefeed.set(System.lineSeparator())
+    sourceSets {
+    }
+}
+
 repositories {
     jcenter()
 }
@@ -30,11 +37,13 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
-    implementation("no.tornado:tornadofx:1.7.17")
+    implementation("no.tornado:tornadofx:1.7.20")
 }
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         jvmTarget = "1.8"
+        apiVersion = "1.3"
+        languageVersion = "1.3"
     }
 }
