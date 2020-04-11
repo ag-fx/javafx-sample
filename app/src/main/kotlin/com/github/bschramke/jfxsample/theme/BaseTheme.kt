@@ -6,6 +6,7 @@ import tornadofx.*
 open class BaseTheme(colors: ThemeColors) : Stylesheet() {
 
     companion object {
+        val glyphIcon by cssclass("glyph-icon")
     }
 
     init {
@@ -17,6 +18,11 @@ open class BaseTheme(colors: ThemeColors) : Stylesheet() {
                 backgroundColor += colors.background
                 textFill = colors.text
             }
+        }
+
+        glyphIcon {
+            fill = colors.text
+            textFill = colors.text
         }
     }
 

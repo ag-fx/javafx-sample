@@ -21,7 +21,7 @@ java {
 
 javafx {
     version = "14"
-    modules = listOf("javafx.controls", "javafx.graphics")
+    modules = listOf("javafx.controls", "javafx.graphics", "javafx.fxml", "javafx.web")
 }
 
 jsass {
@@ -38,6 +38,8 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
     implementation("no.tornado:tornadofx:1.7.20")
+    implementation("de.jensd:fontawesomefx-commons:11.0")
+    implementation("de.jensd:fontawesomefx-materialicons:2.2.0-11")
 }
 
 tasks.withType<KotlinCompile> {
